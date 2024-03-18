@@ -6,7 +6,10 @@ This repository contains a PyTorch implementation for our paper "ADA-GAD: Anomal
 
 ## Framework Details
 
-<img src="./main_photo.png" alt="Framework Details" width="600"/>
+<div style="text-align: center;">
+    <img src="./main_photo.png" alt="Framework Details" width="600"/>
+</div>
+
 
 We introduce a novel twostage framework called Anomaly-Denoised Autoencoders for Graph Anomaly Detection (ADA-GAD). In the first stage, we design a learning-free anomaly-denoised augmentation method to generate graphs with reduced anomaly levels. We pretrain graph autoencoders on these augmented graphs at multiple levels, which enables the graph autoencoders to capture normal patterns. In the next stage, the decoders are retrained for detection on the original graph, benefiting from the multi-level representations learned in the previous stage.
 
