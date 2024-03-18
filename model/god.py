@@ -3,7 +3,7 @@ from tqdm import tqdm
 import torch
 import torch.nn as nn
 
-from graphmae_utils.utils import create_optimizer, accuracy
+from model.utils import create_optimizer, accuracy
 
 import sys
 

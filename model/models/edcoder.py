@@ -7,7 +7,7 @@ import torch.nn as nn
 
 from .gat import GAT
 from .gin import GIN
-from graphmae_utils.utils import create_norm
+from model.utils import create_norm
 from torch_geometric.utils import dropout_edge,dropout_path
 from torch_geometric.utils import add_self_loops, remove_self_loops
 from torch_geometric.utils import to_dense_adj,dense_to_sparse
@@ -15,7 +15,7 @@ from torch_geometric.utils import to_dense_adj,dense_to_sparse
 import sys
 from pygod.models import GCN
 
-from graphmae_utils.models.drop_graph import dropout_subgraph
+from model.models.drop_graph import dropout_subgraph
 from E_high import compute_E_high,compute_G_ano
 
 def setup_module(m_type, enc_dec, in_dim, num_hidden, out_dim, num_layers, dropout, activation, residual, norm, nhead, nhead_out, attn_drop, negative_slope=0.2, concat_out=True,aggr='sum') -> nn.Module:

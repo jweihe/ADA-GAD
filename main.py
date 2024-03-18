@@ -15,7 +15,7 @@ from pygod.metrics import eval_roc_auc,eval_average_precision,eval_ndcg,eval_pre
 from pygod.models import ADANET
 from torch_geometric.utils import to_dense_adj,add_remaining_self_loops,add_self_loops
 
-from graphmae_utils.utils import (
+from model.utils import (
     build_args,
     create_optimizer,
     set_random_seed,
@@ -23,8 +23,8 @@ from graphmae_utils.utils import (
     get_current_lr,
     load_best_configs,
 )
-from graphmae_utils.models import build_model
-from graphmae_utils.god import god_evaluation
+from model.models import build_model
+from model.god import god_evaluation
 
 import logging
 
