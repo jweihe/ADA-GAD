@@ -60,4 +60,4 @@ theta=1.001,eta=1.001):
 
     print(f'auc_score: {auc_score:.4f}',)
 
-    return auc_score,ap_score,ndcg_score,pk_score,rk_score,outlier_scores,edge_outlier_scores
+    return auc_score,None,None,None,None,outlier_scores,edge_outlier_scores
