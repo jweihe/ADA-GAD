@@ -221,8 +221,6 @@ class PreModel(nn.Module):
     def setup_loss_fn(self, loss_fn, alpha_l):
         if loss_fn == "mse":
             criterion = nn.MSELoss()
-        elif loss_fn == "sce":
-            criterion = partial(sce_loss, alpha=alpha_l)
         else:
             raise NotImplementedError
         return criterion
