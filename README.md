@@ -35,11 +35,14 @@ Alternatively, you can run the code directly, and the dataset will be downloaded
 ## Citation
 
 ```
-@article{he2023ada,
-  title={ADA-GAD: Anomaly-Denoised Autoencoders for Graph Anomaly Detection},
+@inproceedings{he2024ada,
+  title={Ada-gad: Anomaly-denoised autoencoders for graph anomaly detection},
   author={He, Junwei and Xu, Qianqian and Jiang, Yangbangyan and Wang, Zitai and Huang, Qingming},
-  journal={arXiv preprint arXiv:2312.14535},
-  year={2023}
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={8},
+  pages={8481--8489},
+  year={2024}
 }
 ```
 
