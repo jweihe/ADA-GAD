@@ -57,4 +57,3 @@ def evaluate(labels_path, scores_path, expected_nodes):
     return {"roc_auc": float(roc_auc_score(y, scores)),
             "average_precision": float(average_precision_score(y, scores)),
             "nodes": len(y), "anomalies": int(y.sum())}
-
