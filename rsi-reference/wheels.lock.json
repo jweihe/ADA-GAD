@@ -1,0 +1,22 @@
+{
+  "files": [
+    {
+      "filename": "torch_cluster-1.6.3+pt22cu121-cp312-cp312-linux_x86_64.whl",
+      "sha256": "29b3993b5834fb1c8473102fbc992773fd679cc115b5899148286f09d41649ce",
+      "bytes": 3362689,
+      "source": "https://data.pyg.org/whl/torch-2.2.0%2Bcu121/torch_cluster-1.6.3%2Bpt22cu121-cp312-cp312-linux_x86_64.whl"
+    },
+    {
+      "filename": "torch_scatter-2.1.2+pt22cu121-cp312-cp312-linux_x86_64.whl",
+      "sha256": "14422c3588511a24b8ff996dd2b1dc731e3215d57b0637696edfefdfd3de63f9",
+      "bytes": 10871359,
+      "source": "https://data.pyg.org/whl/torch-2.2.0%2Bcu121/torch_scatter-2.1.2%2Bpt22cu121-cp312-cp312-linux_x86_64.whl"
+    },
+    {
+      "filename": "torch_sparse-0.6.18+pt22cu121-cp312-cp312-linux_x86_64.whl",
+      "sha256": "6b93cb223f3702773b38ec221c948880a91fd559ed4143f2378615fa98061557",
+      "bytes": 5061441,
+      "source": "https://data.pyg.org/whl/torch-2.2.0%2Bcu121/torch_sparse-0.6.18%2Bpt22cu121-cp312-cp312-linux_x86_64.whl"
+    }
+  ]
+}

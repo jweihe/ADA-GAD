@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "torch": "2.2.2",
+  "device": "cpu",
+  "records": [
+    {
+      "dataset": "weibo",
+      "tensor_count": 29,
+      "total_tensor_bytes": 3609408,
+      "numeric_round_trip": "exact"
+    },
+    {
+      "dataset": "reddit",
+      "tensor_count": 26,
+      "total_tensor_bytes": 1535360,
+      "numeric_round_trip": "exact"
+    }
+  ],
+  "scope": "Fixed real-graph model construction and numeric state schema round-trip; no trained-checkpoint inference parity or GPU execution claimed"
+}

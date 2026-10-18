@@ -1,0 +1,636 @@
+{
+  "schema_version": 1,
+  "acquired_date": "2026-10-17",
+  "source_snapshots": [
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "license": "Apache-2.0",
+      "scope": "training/model code and bundled legacy pygod; original files unchanged"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "license": "BSD-2-Clause",
+      "scope": "library and benchmark source; original files unchanged"
+    }
+  ],
+  "files": [
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "E_high.py",
+      "blob_sha": "eb2badc26c03f3dd4b9f459973b489fe45284a33",
+      "local_path": "sources/ADA-GAD/E_high.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "LICENSE",
+      "blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "local_path": "sources/ADA-GAD/LICENSE"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "README.md",
+      "blob_sha": "cf6d202085d43d7c41af6178c3a3cfdf1bab581a",
+      "local_path": "sources/ADA-GAD/README.md"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "config_ada-gad.yml",
+      "blob_sha": "f70cfbe16df3a4aceb0209ff9d7b4e0a73695ba0",
+      "local_path": "sources/ADA-GAD/config_ada-gad.yml"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "main.py",
+      "blob_sha": "95d0631a90fa1b2f4150165d4e9531da75fa7056",
+      "local_path": "sources/ADA-GAD/main.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "model/god.py",
+      "blob_sha": "f20f983b81a0a8ee6b75785ff01de420adebbd0b",
+      "local_path": "sources/ADA-GAD/model/god.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "model/models/__init__.py",
+      "blob_sha": "80d300d53fcd8150fee3d4adab0953dd943a6b43",
+      "local_path": "sources/ADA-GAD/model/models/__init__.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "model/models/drop_graph.py",
+      "blob_sha": "d348a75c9ef76ab511a0d18e127bd1417964eba0",
+      "local_path": "sources/ADA-GAD/model/models/drop_graph.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "model/models/edcoder.py",
+      "blob_sha": "1f50e1417be879cd4ee2b11e41c6ae4abdbd7a06",
+      "local_path": "sources/ADA-GAD/model/models/edcoder.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "model/models/edcoder_cotrain.py",
+      "blob_sha": "a518f32ab85bb8c1a68e6fb55ac43ece7526015e",
+      "local_path": "sources/ADA-GAD/model/models/edcoder_cotrain.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "model/models/gat.py",
+      "blob_sha": "f53ca4beb5bb74be2b55e3aea6859e7b18cf1291",
+      "local_path": "sources/ADA-GAD/model/models/gat.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "model/models/gin.py",
+      "blob_sha": "0aa5531c427b9bd0d8da9faa84887d6f8d2c12d8",
+      "local_path": "sources/ADA-GAD/model/models/gin.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "model/models/mask.py",
+      "blob_sha": "fb253d8fce51ff71947a31e9df676921298eb1d6",
+      "local_path": "sources/ADA-GAD/model/models/mask.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "model/utils.py",
+      "blob_sha": "8b2be3f575ba696d7e33b4b79b524f2370caf923",
+      "local_path": "sources/ADA-GAD/model/utils.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "pygod/pygod/__init__.py",
+      "blob_sha": "07ac33679c9317e07a3e80fb688b675fa8e659a3",
+      "local_path": "sources/ADA-GAD/pygod/pygod/__init__.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "pygod/pygod/generator/__init__.py",
+      "blob_sha": "4abbe8e921142dc04079835daa4fc286eeaed01d",
+      "local_path": "sources/ADA-GAD/pygod/pygod/generator/__init__.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "pygod/pygod/generator/outlier_generator.py",
+      "blob_sha": "e2370cb7a856caeef6c602458d0611ba71a9d586",
+      "local_path": "sources/ADA-GAD/pygod/pygod/generator/outlier_generator.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "pygod/pygod/metrics/__init__.py",
+      "blob_sha": "1761d1aa7d58a7c39d4d8f051fecfd5b99802c7e",
+      "local_path": "sources/ADA-GAD/pygod/pygod/metrics/__init__.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "pygod/pygod/metrics/metrics.py",
+      "blob_sha": "922a11793898075b0477dd6e5dbd0532d300b262",
+      "local_path": "sources/ADA-GAD/pygod/pygod/metrics/metrics.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "pygod/pygod/models/__init__.py",
+      "blob_sha": "baccf23a9ef2d4bc6313b89a341aa3e87fb29a13",
+      "local_path": "sources/ADA-GAD/pygod/pygod/models/__init__.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "pygod/pygod/models/adanet.py",
+      "blob_sha": "39eb25a2a530d5e2982f8e3ac0c48b069391f196",
+      "local_path": "sources/ADA-GAD/pygod/pygod/models/adanet.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "pygod/pygod/models/base.py",
+      "blob_sha": "b1d258a32db27059935a6bc2a15eed80acfb319a",
+      "local_path": "sources/ADA-GAD/pygod/pygod/models/base.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "pygod/pygod/models/basic_nn.py",
+      "blob_sha": "715e192824508ee7127cb2504eebd3fd6466c6aa",
+      "local_path": "sources/ADA-GAD/pygod/pygod/models/basic_nn.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "pygod/pygod/models/gat.py",
+      "blob_sha": "f8fe83b64363c66f3469c40bad748b6249e301ed",
+      "local_path": "sources/ADA-GAD/pygod/pygod/models/gat.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "pygod/pygod/models/gcnae.py",
+      "blob_sha": "ee5c9b782918d6ae4e903f847d02c8898f8a1dc9",
+      "local_path": "sources/ADA-GAD/pygod/pygod/models/gcnae.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "pygod/pygod/utils/__init__.py",
+      "blob_sha": "122600b6eba859c2b0c01ba8518b150373aa913f",
+      "local_path": "sources/ADA-GAD/pygod/pygod/utils/__init__.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "pygod/pygod/utils/dataset.py",
+      "blob_sha": "617d6b779a4f5b25b6f870e06b82fee101cc04a9",
+      "local_path": "sources/ADA-GAD/pygod/pygod/utils/dataset.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "pygod/pygod/utils/utility.py",
+      "blob_sha": "bd47165c19d9b35acfc97e4097a723bf72f225c3",
+      "local_path": "sources/ADA-GAD/pygod/pygod/utils/utility.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "pygod/pygod/version.py",
+      "blob_sha": "05af307344e028f47b11e83e1f87eee441ec714c",
+      "local_path": "sources/ADA-GAD/pygod/pygod/version.py"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "requirements.txt",
+      "blob_sha": "bb31c514a69e6d18a33189b7b80a2961ab917fbc",
+      "local_path": "sources/ADA-GAD/requirements.txt"
+    },
+    {
+      "repository": "jweihe/ADA-GAD",
+      "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+      "path": "run.sh",
+      "blob_sha": "0055debc30e36a0c4013acbd4403b4b6307a23a7",
+      "local_path": "sources/ADA-GAD/run.sh"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "LICENSE",
+      "blob_sha": "788a3b869face05b7507acef29eef5347bbe99bf",
+      "local_path": "sources/pygod/LICENSE"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "README.rst",
+      "blob_sha": "e0e1c31e7995061d8d3343690cab3815e5096244",
+      "local_path": "sources/pygod/README.rst"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "benchmark/README.md",
+      "blob_sha": "3e3cee925310d54b6d276c56cbc0e7fbd4c2f516",
+      "local_path": "sources/pygod/benchmark/README.md"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "benchmark/main.py",
+      "blob_sha": "847f30f8b92062491dad3be44a883cb22a0b5cff",
+      "local_path": "sources/pygod/benchmark/main.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "benchmark/requirements.txt",
+      "blob_sha": "f81db446fd803b10810e6e67c5ec1e5eb0587624",
+      "local_path": "sources/pygod/benchmark/requirements.txt"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "benchmark/time.py",
+      "blob_sha": "687df9bf83848e865fbfb03603fd536388007428",
+      "local_path": "sources/pygod/benchmark/time.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "benchmark/type.py",
+      "blob_sha": "6489053f167661e0c244015fa4bcac742e5fc061",
+      "local_path": "sources/pygod/benchmark/type.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "benchmark/utils.py",
+      "blob_sha": "9d408dbe8d70838890977215dabb1b7693e34b29",
+      "local_path": "sources/pygod/benchmark/utils.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/__init__.py",
+      "blob_sha": "7e358476a4e3eaa26fe3b24844597c3660efaecb",
+      "local_path": "sources/pygod/pygod/__init__.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/__init__.py",
+      "blob_sha": "f3505312c9682fe7e755e6c1c4a5ee7aad24f160",
+      "local_path": "sources/pygod/pygod/detector/__init__.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/adone.py",
+      "blob_sha": "94d247fce7317d57470a2ee1ec8b2fe6c9932b52",
+      "local_path": "sources/pygod/pygod/detector/adone.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/anomalous.py",
+      "blob_sha": "b31c5c5c583e9df0809f636b7c013bc0f2564aa3",
+      "local_path": "sources/pygod/pygod/detector/anomalous.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/anomalydae.py",
+      "blob_sha": "3759ccb4e8c336e09ee87e9992136799da519c08",
+      "local_path": "sources/pygod/pygod/detector/anomalydae.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/base.py",
+      "blob_sha": "7c056cfde0118fd646234c53102e1dc1adc9f5ab",
+      "local_path": "sources/pygod/pygod/detector/base.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/card.py",
+      "blob_sha": "6bfb5f79e58a9b9e01ba4c3708dfef7651df53f6",
+      "local_path": "sources/pygod/pygod/detector/card.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/cola.py",
+      "blob_sha": "11d31aef3e248cde28a0b70fb1b19ace8e15a247",
+      "local_path": "sources/pygod/pygod/detector/cola.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/conad.py",
+      "blob_sha": "235aaab9726c6d6807529f0dfb6483ec2e9190d9",
+      "local_path": "sources/pygod/pygod/detector/conad.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/dmgd.py",
+      "blob_sha": "198c8a5ca0af6269c32df70db71ed4e3ef75f8fb",
+      "local_path": "sources/pygod/pygod/detector/dmgd.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/dominant.py",
+      "blob_sha": "48bf0472ed777994ed8e792bffdc7f79f098c975",
+      "local_path": "sources/pygod/pygod/detector/dominant.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/done.py",
+      "blob_sha": "cc42d4202f9d636f1989a0c735a7643421001a84",
+      "local_path": "sources/pygod/pygod/detector/done.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/gaan.py",
+      "blob_sha": "040bcab52c4e915f7cd7dd17cdfa5000db84d650",
+      "local_path": "sources/pygod/pygod/detector/gaan.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/gadnr.py",
+      "blob_sha": "428a18bb8859fa7498b192e9511ee2d890ad9a1a",
+      "local_path": "sources/pygod/pygod/detector/gadnr.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/gae.py",
+      "blob_sha": "5fc10fe0bf3e13caaf318cff6fdb0b7c142fecc2",
+      "local_path": "sources/pygod/pygod/detector/gae.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/guide.py",
+      "blob_sha": "72c993ce1e2263b8faddefcdd4e03fd92ffd28cc",
+      "local_path": "sources/pygod/pygod/detector/guide.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/ocgnn.py",
+      "blob_sha": "ff407b3491f0df8b29040daefe6a117c7895b052",
+      "local_path": "sources/pygod/pygod/detector/ocgnn.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/one.py",
+      "blob_sha": "cb22fde74d23e0b9e7925e97a47c579221565b43",
+      "local_path": "sources/pygod/pygod/detector/one.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/radar.py",
+      "blob_sha": "aa139d005675a90b54c6c7582207230658329a9e",
+      "local_path": "sources/pygod/pygod/detector/radar.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/detector/scan.py",
+      "blob_sha": "92a55952c9e9b356f1f9b52a60ea029dd6b7e11d",
+      "local_path": "sources/pygod/pygod/detector/scan.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/generator/__init__.py",
+      "blob_sha": "fd4eeb9bc0da6005b53c5c69394cbd6c89555fab",
+      "local_path": "sources/pygod/pygod/generator/__init__.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/generator/outlier_generator.py",
+      "blob_sha": "9146687d577f919d4008d2baab41e85dc35fb1ac",
+      "local_path": "sources/pygod/pygod/generator/outlier_generator.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/metric/__init__.py",
+      "blob_sha": "12c07e7958ce2488a2b3affe0f8fee00161b65ab",
+      "local_path": "sources/pygod/pygod/metric/__init__.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/metric/metric.py",
+      "blob_sha": "645f750fdd48e86688079daf2f37915a6425f478",
+      "local_path": "sources/pygod/pygod/metric/metric.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/__init__.py",
+      "blob_sha": "eaae8da42eebaab0a188f15aad9d764d59f70470",
+      "local_path": "sources/pygod/pygod/nn/__init__.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/adone.py",
+      "blob_sha": "2c529e8d82e99ef4a1e7a9051ce8490786cfceba",
+      "local_path": "sources/pygod/pygod/nn/adone.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/anomalydae.py",
+      "blob_sha": "6d0e87795e2443fbe3e1a84ce815a53fc85db039",
+      "local_path": "sources/pygod/pygod/nn/anomalydae.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/card.py",
+      "blob_sha": "ce6a8ef3f14650c88428ba0b148a5acfdfd19bc9",
+      "local_path": "sources/pygod/pygod/nn/card.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/cola.py",
+      "blob_sha": "5eea98eead5870365e38564ffbcf59663251f78d",
+      "local_path": "sources/pygod/pygod/nn/cola.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/conv.py",
+      "blob_sha": "c69c91cfe2d58f5ac8423498ea377eb897cad504",
+      "local_path": "sources/pygod/pygod/nn/conv.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/decoder.py",
+      "blob_sha": "06a3d7cdaf43ef38b3e37f0968a37a77628a2188",
+      "local_path": "sources/pygod/pygod/nn/decoder.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/dmgd.py",
+      "blob_sha": "7cb0d0998a27d4740187eebc84079966ecc47023",
+      "local_path": "sources/pygod/pygod/nn/dmgd.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/dominant.py",
+      "blob_sha": "975979d58347f4b91e2029ac5068877f5abd5d29",
+      "local_path": "sources/pygod/pygod/nn/dominant.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/done.py",
+      "blob_sha": "b0403ff1e4f82527d37182d7aed023949e49e3ac",
+      "local_path": "sources/pygod/pygod/nn/done.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/encoder.py",
+      "blob_sha": "78e3c52f28c2632f376797d7cc03fa98d75848a1",
+      "local_path": "sources/pygod/pygod/nn/encoder.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/functional.py",
+      "blob_sha": "c526dd5fb680e6f9fc6683e3c192813d74e57515",
+      "local_path": "sources/pygod/pygod/nn/functional.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/gaan.py",
+      "blob_sha": "89680f0776cd1bd499ab4fad69bf6b57f71e83f3",
+      "local_path": "sources/pygod/pygod/nn/gaan.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/gadnr.py",
+      "blob_sha": "ba769513cd182573505beaf1753c7a9fdd0e4bca",
+      "local_path": "sources/pygod/pygod/nn/gadnr.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/gae.py",
+      "blob_sha": "67306e4a7160bfce6c5c9051185fc525dd873486",
+      "local_path": "sources/pygod/pygod/nn/gae.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/guide.py",
+      "blob_sha": "4af6ba1143a11d87fb90a17671617eb237f5e7d2",
+      "local_path": "sources/pygod/pygod/nn/guide.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/nn.py",
+      "blob_sha": "e3893f0c655e9ce4b6a8aba765905eb99486f4d6",
+      "local_path": "sources/pygod/pygod/nn/nn.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/nn/ocgnn.py",
+      "blob_sha": "ae1862411cd9c68222cd1cf2d2b9530089dde9b1",
+      "local_path": "sources/pygod/pygod/nn/ocgnn.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/utils/__init__.py",
+      "blob_sha": "c35e27d4987041927340b2af526416840a18a840",
+      "local_path": "sources/pygod/pygod/utils/__init__.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/utils/score_converter.py",
+      "blob_sha": "b79067d0d15714527b7a1174540be8a59bec9d54",
+      "local_path": "sources/pygod/pygod/utils/score_converter.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/utils/utility.py",
+      "blob_sha": "13ccbb9fb7dba734973c28bf04c4be27a56a52e6",
+      "local_path": "sources/pygod/pygod/utils/utility.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "pygod/version.py",
+      "blob_sha": "aa75d148eb3848b159d1e7fa8bd1ae378a809a70",
+      "local_path": "sources/pygod/pygod/version.py"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "requirements.txt",
+      "blob_sha": "c8d751fb8703ede0189616ed04406fbf10566cd8",
+      "local_path": "sources/pygod/requirements.txt"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "setup.cfg",
+      "blob_sha": "ddbfe9daabbfe2bc655c63058acd36863ed96dfc",
+      "local_path": "sources/pygod/setup.cfg"
+    },
+    {
+      "repository": "pygod-team/pygod",
+      "commit": "c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8",
+      "path": "setup.py",
+      "blob_sha": "3257fb7be47f12e4d636c0b100be284faab70075",
+      "local_path": "sources/pygod/setup.py"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "validated_at_utc": "2026-10-18T16:09:29.224874+00:00",
+  "contract_and_artifact_tests": {
+    "passed": 23,
+    "python": "3.12.14",
+    "platform": "macOS arm64"
+  },
+  "existing_gpu_training_calibration": {
+    "runs": 6,
+    "single_gpu": "A100 80GB",
+    "metrics_recomputed": true
+  },
+  "new_full_preparation_and_gpu_reload_parity": "pending",
+  "harbor_validation": "pending",
+  "strong_model_trajectory": "not_run",
+  "record_scope": "Completed checks are distinct from the new pipeline execution requirements",
+  "fixed_graph_reconstruction": "Both graphs recreated from public pinned archives; graph and label archive hashes match earlier Linux calibration",
+  "fixed_model_numeric_schema": "Two real-graph CPU model constructions and exact numeric state round trips passed with PyTorch 2.2.2"
+}

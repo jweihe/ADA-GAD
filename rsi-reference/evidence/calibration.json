@@ -1,0 +1,439 @@
+{
+  "schema_version": 1,
+  "source_revision": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
+  "scope": "Earlier contributor-run calibration; these checkpoints are not required artifacts of the public preparation contract",
+  "started_at_utc": "2026-10-18T03:53:17.095963+00:00",
+  "wall_seconds": 5975.114810705185,
+  "peak_cuda_allocated_bytes": 5493093376,
+  "six_trial_mean_roc_auc": 0.7483520309762254,
+  "aggregates": {
+    "weibo": {
+      "roc_auc": {
+        "mean": 0.9278532154845668,
+        "std_ddof0": 0.0034164654856395174,
+        "std_ddof1": 0.004184298581823374
+      },
+      "average_precision": {
+        "mean": 0.3101950049870797,
+        "std_ddof0": 0.009091993618248464,
+        "std_ddof1": 0.011135372554674864
+      }
+    },
+    "reddit": {
+      "roc_auc": {
+        "mean": 0.568850846467884,
+        "std_ddof0": 7.548243173034396e-05,
+        "std_ddof1": 9.244672114190451e-05
+      },
+      "average_precision": {
+        "mean": 0.04093021463610501,
+        "std_ddof0": 3.1319072168560634e-05,
+        "std_ddof1": 3.8357873015187694e-05
+      }
+    }
+  },
+  "trials": [
+    {
+      "dataset": "weibo",
+      "method": "ada-gad",
+      "seed": 0,
+      "fingerprint": "bea7c873aa85f456f4d3d4a23e2043613c303391b3263e7dc41d5e7ae7afd4ea",
+      "graph_sha256": "f1998525253f95b53a35e294a8dad0a88c186d9a237dfe9b657eeef7755cffc3",
+      "scores_sha256": "4ba696c0aab363c9f1d19fdcffa5dba777ca0ac49131dc5cb7b74cbcf6dd7ca2",
+      "training": {
+        "method": "ada-gad",
+        "seed": 0,
+        "params": {
+          "hid_dim": 48,
+          "alpha": null,
+          "dropout": 0,
+          "lr": 0.01,
+          "epoch": 20,
+          "loss_name": "add_log_t_entropy",
+          "loss_weight": -0.1,
+          "T": 2,
+          "aggr": "add",
+          "attention": 2,
+          "use_encoder_num": 3,
+          "attr_encoder_name": "gat",
+          "struct_encoder_name": "gat",
+          "topology_encoder_name": "gat",
+          "attr_decoder_name": "gcn",
+          "struct_decoder_name": "gcn",
+          "node_encoder_num_layers": 1,
+          "edge_encoder_num_layers": 1,
+          "subgraph_encoder_num_layers": 1,
+          "attr_decoder_num_layers": 1,
+          "struct_decoder_num_layers": 1,
+          "sparse_attention_weight": 0,
+          "theta": 1.0,
+          "eta": 1.0
+        },
+        "nodes": 8405,
+        "edges": 407963,
+        "runtime_seconds": 637.8813338410109,
+        "peak_cuda_allocated_bytes": 3338978816
+      },
+      "metrics": {
+        "roc_auc": 0.928757681163152,
+        "average_precision": 0.3129787973263104,
+        "nodes": 8405,
+        "anomalies": 347
+      },
+      "metrics_recomputed": true,
+      "pretraining_checkpoints": [
+        {
+          "encoder": 0,
+          "epoch": 20,
+          "sha256": "40c3e2fbd5d480519a78a1748b52b41b48477f97b94ff3ffb4ea9b0f391f747b"
+        },
+        {
+          "encoder": 1,
+          "epoch": 20,
+          "sha256": "49aa1d2f9f2d08aaa8aef8daacb0609f7da3d482c2a66bff6c5ac889c562c949"
+        },
+        {
+          "encoder": 2,
+          "epoch": 20,
+          "sha256": "7d6db1264e0520d9989cc64a3c7199651bd58b1a4c22e5a9dc9fd4246738231b"
+        }
+      ],
+      "final_checkpoint_sha256": "966faf97e1236f98c8856f7ae5fca7c0032aff1354307955bd8cb4d280d7368a"
+    },
+    {
+      "dataset": "weibo",
+      "method": "ada-gad",
+      "seed": 1,
+      "fingerprint": "bea7c873aa85f456f4d3d4a23e2043613c303391b3263e7dc41d5e7ae7afd4ea",
+      "graph_sha256": "f1998525253f95b53a35e294a8dad0a88c186d9a237dfe9b657eeef7755cffc3",
+      "scores_sha256": "3d2bc23cc82306d105dc874c897d9fc660aa03e9a192f1050e151e372292eaea",
+      "training": {
+        "method": "ada-gad",
+        "seed": 1,
+        "params": {
+          "hid_dim": 48,
+          "alpha": null,
+          "dropout": 0,
+          "lr": 0.01,
+          "epoch": 20,
+          "loss_name": "add_log_t_entropy",
+          "loss_weight": -0.1,
+          "T": 2,
+          "aggr": "add",
+          "attention": 2,
+          "use_encoder_num": 3,
+          "attr_encoder_name": "gat",
+          "struct_encoder_name": "gat",
+          "topology_encoder_name": "gat",
+          "attr_decoder_name": "gcn",
+          "struct_decoder_name": "gcn",
+          "node_encoder_num_layers": 1,
+          "edge_encoder_num_layers": 1,
+          "subgraph_encoder_num_layers": 1,
+          "attr_decoder_num_layers": 1,
+          "struct_decoder_num_layers": 1,
+          "sparse_attention_weight": 0,
+          "theta": 1.0,
+          "eta": 1.0
+        },
+        "nodes": 8405,
+        "edges": 407963,
+        "runtime_seconds": 632.6747053824365,
+        "peak_cuda_allocated_bytes": 3338978816
+      },
+      "metrics": {
+        "roc_auc": 0.9315113124372794,
+        "average_precision": 0.3196743735594544,
+        "nodes": 8405,
+        "anomalies": 347
+      },
+      "metrics_recomputed": true,
+      "pretraining_checkpoints": [
+        {
+          "encoder": 0,
+          "epoch": 20,
+          "sha256": "d5a78d49315219c54df97853a65c6caecb099e833df353e9c2f00d858edf87fd"
+        },
+        {
+          "encoder": 1,
+          "epoch": 20,
+          "sha256": "e5f11b0a72a81f685d4e08748d08fdc34ff87752bd5f65e59927d2bbb8b10d32"
+        },
+        {
+          "encoder": 2,
+          "epoch": 20,
+          "sha256": "e57a92dc099e8ace31a6b5eed17638f6607b4488bd1519f264277347fe956a40"
+        }
+      ],
+      "final_checkpoint_sha256": "0a29e953efe02f98131cb7550be12d462f58b21dc0fa4d0235842b2e720f8e93"
+    },
+    {
+      "dataset": "weibo",
+      "method": "ada-gad",
+      "seed": 2,
+      "fingerprint": "bea7c873aa85f456f4d3d4a23e2043613c303391b3263e7dc41d5e7ae7afd4ea",
+      "graph_sha256": "f1998525253f95b53a35e294a8dad0a88c186d9a237dfe9b657eeef7755cffc3",
+      "scores_sha256": "68eb9dc98770a24c8322ec127df7858d235728861f97b2419ca95d386749ccb3",
+      "training": {
+        "method": "ada-gad",
+        "seed": 2,
+        "params": {
+          "hid_dim": 48,
+          "alpha": null,
+          "dropout": 0,
+          "lr": 0.01,
+          "epoch": 20,
+          "loss_name": "add_log_t_entropy",
+          "loss_weight": -0.1,
+          "T": 2,
+          "aggr": "add",
+          "attention": 2,
+          "use_encoder_num": 3,
+          "attr_encoder_name": "gat",
+          "struct_encoder_name": "gat",
+          "topology_encoder_name": "gat",
+          "attr_decoder_name": "gcn",
+          "struct_decoder_name": "gcn",
+          "node_encoder_num_layers": 1,
+          "edge_encoder_num_layers": 1,
+          "subgraph_encoder_num_layers": 1,
+          "attr_decoder_num_layers": 1,
+          "struct_decoder_num_layers": 1,
+          "sparse_attention_weight": 0,
+          "theta": 1.0,
+          "eta": 1.0
+        },
+        "nodes": 8405,
+        "edges": 407963,
+        "runtime_seconds": 633.1547736227512,
+        "peak_cuda_allocated_bytes": 3338978816
+      },
+      "metrics": {
+        "roc_auc": 0.9232906528532691,
+        "average_precision": 0.29793184407547424,
+        "nodes": 8405,
+        "anomalies": 347
+      },
+      "metrics_recomputed": true,
+      "pretraining_checkpoints": [
+        {
+          "encoder": 0,
+          "epoch": 20,
+          "sha256": "10c6504d703894c5bbd7ffe0c9dde5dff8cee62b5c08e530473e8b9c8e616251"
+        },
+        {
+          "encoder": 1,
+          "epoch": 20,
+          "sha256": "18e6aaf56b78e76fcd68951742881f3c7aefa082116119ec31093293dd2bd84c"
+        },
+        {
+          "encoder": 2,
+          "epoch": 20,
+          "sha256": "5ea746b100e38e4e645699bece43684dfde16bd3b56dfc878ada064f9cbdf0b7"
+        }
+      ],
+      "final_checkpoint_sha256": "6d23ae6d7dd6344db9fa987cdf53efb894dce838569d93c3da9b4099e388426e"
+    },
+    {
+      "dataset": "reddit",
+      "method": "ada-gad",
+      "seed": 0,
+      "fingerprint": "bea7c873aa85f456f4d3d4a23e2043613c303391b3263e7dc41d5e7ae7afd4ea",
+      "graph_sha256": "9bdeff7750eb0464a4de7ae07fbd531a69732ce8f19b532cef08e96b80f8dc1e",
+      "scores_sha256": "e050abffb8a5424d39ddd5bee156aa135e94cd9f9f6db78e4a9f370b7fd9764b",
+      "training": {
+        "method": "ada-gad",
+        "seed": 0,
+        "params": {
+          "hid_dim": 32,
+          "alpha": 0.9,
+          "dropout": 0,
+          "lr": 0.001,
+          "epoch": 20,
+          "loss_name": "add_log_t_entropy",
+          "loss_weight": -1,
+          "T": 2,
+          "aggr": "add",
+          "attention": 2,
+          "use_encoder_num": 3,
+          "attr_encoder_name": "gcn",
+          "struct_encoder_name": "gcn",
+          "topology_encoder_name": "gcn",
+          "attr_decoder_name": "gcn",
+          "struct_decoder_name": "gcn",
+          "node_encoder_num_layers": 1,
+          "edge_encoder_num_layers": 1,
+          "subgraph_encoder_num_layers": 1,
+          "attr_decoder_num_layers": 1,
+          "struct_decoder_num_layers": 1,
+          "sparse_attention_weight": 0,
+          "theta": 1.0,
+          "eta": 1.0
+        },
+        "nodes": 10984,
+        "edges": 168016,
+        "runtime_seconds": 1354.7375434730202,
+        "peak_cuda_allocated_bytes": 5493093376
+      },
+      "metrics": {
+        "roc_auc": 0.5687947932524108,
+        "average_precision": 0.040961409609568955,
+        "nodes": 10984,
+        "anomalies": 366
+      },
+      "metrics_recomputed": true,
+      "pretraining_checkpoints": [
+        {
+          "encoder": 0,
+          "epoch": 20,
+          "sha256": "db142a449f922c6eae457f60f524b6504dc2cdfc81ade356c9576c18999951ee"
+        },
+        {
+          "encoder": 1,
+          "epoch": 20,
+          "sha256": "ba00638c1dc9f9e1a99ae7a3cab21d0b53a2b74560906aa8b37580a2b54c3fae"
+        },
+        {
+          "encoder": 2,
+          "epoch": 20,
+          "sha256": "4fa43b5a671a58c7fec4f5b28a34aa6d4f94ac0317eb417b1bc94c829ac2f240"
+        }
+      ],
+      "final_checkpoint_sha256": "384a303c4b6e8d170b91570223a669d620c7bd86f173d9a3a7ff70ebb66e88af"
+    },
+    {
+      "dataset": "reddit",
+      "method": "ada-gad",
+      "seed": 1,
+      "fingerprint": "bea7c873aa85f456f4d3d4a23e2043613c303391b3263e7dc41d5e7ae7afd4ea",
+      "graph_sha256": "9bdeff7750eb0464a4de7ae07fbd531a69732ce8f19b532cef08e96b80f8dc1e",
+      "scores_sha256": "55adf8a642e3e9e016eaefe20850b1e9083798d43f0014341d6b8f9d4c660e08",
+      "training": {
+        "method": "ada-gad",
+        "seed": 1,
+        "params": {
+          "hid_dim": 32,
+          "alpha": 0.9,
+          "dropout": 0,
+          "lr": 0.001,
+          "epoch": 20,
+          "loss_name": "add_log_t_entropy",
+          "loss_weight": -1,
+          "T": 2,
+          "aggr": "add",
+          "attention": 2,
+          "use_encoder_num": 3,
+          "attr_encoder_name": "gcn",
+          "struct_encoder_name": "gcn",
+          "topology_encoder_name": "gcn",
+          "attr_decoder_name": "gcn",
+          "struct_decoder_name": "gcn",
+          "node_encoder_num_layers": 1,
+          "edge_encoder_num_layers": 1,
+          "subgraph_encoder_num_layers": 1,
+          "attr_decoder_num_layers": 1,
+          "struct_decoder_num_layers": 1,
+          "sparse_attention_weight": 0,
+          "theta": 1.0,
+          "eta": 1.0
+        },
+        "nodes": 10984,
+        "edges": 168016,
+        "runtime_seconds": 1355.2303369967267,
+        "peak_cuda_allocated_bytes": 5493093376
+      },
+      "metrics": {
+        "roc_auc": 0.5689575491458467,
+        "average_precision": 0.04094184730995256,
+        "nodes": 10984,
+        "anomalies": 366
+      },
+      "metrics_recomputed": true,
+      "pretraining_checkpoints": [
+        {
+          "encoder": 0,
+          "epoch": 20,
+          "sha256": "0f8339f02d1e19f16ada4d54765df93119ac919d51e8c8bbfbf199cedcff9124"
+        },
+        {
+          "encoder": 1,
+          "epoch": 20,
+          "sha256": "85c319f160972df7f72d4b02bfd29bf3bc0684763466e0b155d2e595c33ae6c4"
+        },
+        {
+          "encoder": 2,
+          "epoch": 20,
+          "sha256": "ce2ef91777f7beb9e3b9b1d71874247e8c1a9f4a6a0cf86eba3801a30d9bc57b"
+        }
+      ],
+      "final_checkpoint_sha256": "52a34b7f885989962485b8536efc2823fb82b2a959fcf28ae7e05fd70b3e56a4"
+    },
+    {
+      "dataset": "reddit",
+      "method": "ada-gad",
+      "seed": 2,
+      "fingerprint": "bea7c873aa85f456f4d3d4a23e2043613c303391b3263e7dc41d5e7ae7afd4ea",
+      "graph_sha256": "9bdeff7750eb0464a4de7ae07fbd531a69732ce8f19b532cef08e96b80f8dc1e",
+      "scores_sha256": "53eea6bb54ccdaa65a9006b42c7c6a5e22ce1f8f8898832db8c573b10fbdea07",
+      "training": {
+        "method": "ada-gad",
+        "seed": 2,
+        "params": {
+          "hid_dim": 32,
+          "alpha": 0.9,
+          "dropout": 0,
+          "lr": 0.001,
+          "epoch": 20,
+          "loss_name": "add_log_t_entropy",
+          "loss_weight": -1,
+          "T": 2,
+          "aggr": "add",
+          "attention": 2,
+          "use_encoder_num": 3,
+          "attr_encoder_name": "gcn",
+          "struct_encoder_name": "gcn",
+          "topology_encoder_name": "gcn",
+          "attr_decoder_name": "gcn",
+          "struct_decoder_name": "gcn",
+          "node_encoder_num_layers": 1,
+          "edge_encoder_num_layers": 1,
+          "subgraph_encoder_num_layers": 1,
+          "attr_decoder_num_layers": 1,
+          "struct_decoder_num_layers": 1,
+          "sparse_attention_weight": 0,
+          "theta": 1.0,
+          "eta": 1.0
+        },
+        "nodes": 10984,
+        "edges": 168016,
+        "runtime_seconds": 1352.7029437720776,
+        "peak_cuda_allocated_bytes": 5493093376
+      },
+      "metrics": {
+        "roc_auc": 0.5688001970053945,
+        "average_precision": 0.0408873869887935,
+        "nodes": 10984,
+        "anomalies": 366
+      },
+      "metrics_recomputed": true,
+      "pretraining_checkpoints": [
+        {
+          "encoder": 0,
+          "epoch": 20,
+          "sha256": "54038f24fb692c60a293963fc8ef1a3257112468d6e65f4ecce97c0bd8e87a94"
+        },
+        {
+          "encoder": 1,
+          "epoch": 20,
+          "sha256": "46fe7ef7c9be379c0f1d1307c4cf14cc081b993aaf2acd47f15adf63a0f68b42"
+        },
+        {
+          "encoder": 2,
+          "epoch": 20,
+          "sha256": "d82649a49d496193033d8acd00f528c96fbcaf620657ae927fe28587cd24d663"
+        }
+      ],
+      "final_checkpoint_sha256": "635a57a33bee886d7f842bdbc4e1e90a7abcf379adb4aef64b68749657b6ff00"
+    }
+  ]
+}

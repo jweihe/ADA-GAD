@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "scope": "Fresh public downloads and trusted CPU preprocessing reproduce both earlier graph and label archive hashes; no label arrays are published",
+  "datasets": {
+    "weibo": {
+      "dataset": "weibo",
+      "source_commit": "77976df4129f5f753907beea4945bd3e21d0251f",
+      "archive_sha256": "c4a5fe4ca61a9566e051bf0544816c9340c49b031dfd07693b473d18e4e6f2f9",
+      "graph_sha256": "f1998525253f95b53a35e294a8dad0a88c186d9a237dfe9b657eeef7755cffc3",
+      "labels_sha256": "39e6298acb57904db8d55d083b26a81d0b389baeca9b459eedd7eac1fef24c8e",
+      "nodes": 8405,
+      "edges": 407963,
+      "features": 400,
+      "anomalies": 347,
+      "protocol": "transductive_unsupervised_all_nodes_engineering_protocol",
+      "label_visibility": "operator_evaluator_only; filesystem sandbox not supplied by this research CLI"
+    },
+    "reddit": {
+      "dataset": "reddit",
+      "source_commit": "77976df4129f5f753907beea4945bd3e21d0251f",
+      "archive_sha256": "276432d36219349b7ad98e974649f73c94e124e11f5282f53b1ec41086c1e18a",
+      "graph_sha256": "9bdeff7750eb0464a4de7ae07fbd531a69732ce8f19b532cef08e96b80f8dc1e",
+      "labels_sha256": "f0a825a53c91a780acbbb19d08e066919784fb0df8e5f2b72b94847094b7b86f",
+      "nodes": 10984,
+      "edges": 168016,
+      "features": 64,
+      "anomalies": 366,
+      "protocol": "transductive_unsupervised_all_nodes_engineering_protocol",
+      "label_visibility": "operator_evaluator_only; filesystem sandbox not supplied by this research CLI"
+    }
+  }
+}

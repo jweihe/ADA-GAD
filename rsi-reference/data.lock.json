@@ -1,0 +1,90 @@
+{
+  "repository": "pygod-team/data",
+  "commit": "77976df4129f5f753907beea4945bd3e21d0251f",
+  "files": [
+    {
+      "name": "books",
+      "file": "books.pt.zip",
+      "git_blob_sha": "577d1b07dd8c05c1d450cb4d0494bee3846cdaf5",
+      "size": 60512
+    },
+    {
+      "name": "disney",
+      "file": "disney.pt.zip",
+      "git_blob_sha": "812658778c43f5ed6da2af7cb0620def4a5a48a2",
+      "size": 8987
+    },
+    {
+      "name": "enron",
+      "file": "enron.pt.zip",
+      "git_blob_sha": "4c29202c6b6ba617435a2101907ff2ac7f94fa33",
+      "size": 1032498
+    },
+    {
+      "name": "gen_100",
+      "file": "gen_100.pt.zip",
+      "git_blob_sha": "3d68cb059ad6a57eb51adcec535dd6550cfe5ea9",
+      "size": 22333
+    },
+    {
+      "name": "gen_1000",
+      "file": "gen_1000.pt.zip",
+      "git_blob_sha": "491c2f8e007eaf5ad79a2afc459305d9f167efc9",
+      "size": 232864
+    },
+    {
+      "name": "gen_10000",
+      "file": "gen_10000.pt.zip",
+      "git_blob_sha": "ae56f8a75cdcf8425759e468032765e903545be5",
+      "size": 2328671
+    },
+    {
+      "name": "gen_500",
+      "file": "gen_500.pt.zip",
+      "git_blob_sha": "83d2c06447de9e9c8030c7024b35547f0f323749",
+      "size": 116377
+    },
+    {
+      "name": "gen_5000",
+      "file": "gen_5000.pt.zip",
+      "git_blob_sha": "f965e9d44c8d52688291cf114f6efa7becd772a9",
+      "size": 1158920
+    },
+    {
+      "name": "gen_time",
+      "file": "gen_time.pt.zip",
+      "git_blob_sha": "bbae0f9b1fd6297950bd7e75b66bca35063c77c2",
+      "size": 228640
+    },
+    {
+      "name": "inj_amazon",
+      "file": "inj_amazon.pt.zip",
+      "git_blob_sha": "1d225e978ca1e97c39f358da7d8f3c7f14efa686",
+      "size": 3334212
+    },
+    {
+      "name": "inj_cora",
+      "file": "inj_cora.pt.zip",
+      "git_blob_sha": "a452aad0a4946a6efab41174d9ce02011689aa98",
+      "size": 178584
+    },
+    {
+      "name": "inj_flickr",
+      "file": "inj_flickr.pt.zip",
+      "git_blob_sha": "cdc7c22093ace811813277ed4f1d5a888664a696",
+      "size": 26642685
+    },
+    {
+      "name": "reddit",
+      "file": "reddit.pt.zip",
+      "git_blob_sha": "7851dbe7e17aea7ca44983696b6d7e3d7a696711",
+      "size": 2410608
+    },
+    {
+      "name": "weibo",
+      "file": "weibo.pt.zip",
+      "git_blob_sha": "71a1687cd7b9d51f815e9ea99e88ff6f12a6593a",
+      "size": 13339024
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "source": {
+    "repository": "jweihe/ADA-GAD",
+    "commit": "71a3aca936ccfe430e3809864f256d4bf80b22ee"
+  },
+  "datasets": {
+    "weibo": {
+      "nodes": 8405,
+      "features": 400,
+      "graph_sha256": "f1998525253f95b53a35e294a8dad0a88c186d9a237dfe9b657eeef7755cffc3",
+      "params": {
+        "hid_dim": 48,
+        "alpha": null,
+        "dropout": 0,
+        "lr": 0.01,
+        "epoch": 20,
+        "loss_name": "add_log_t_entropy",
+        "loss_weight": -0.1,
+        "T": 2,
+        "aggr": "add",
+        "attention": 2,
+        "use_encoder_num": 3,
+        "attr_encoder_name": "gat",
+        "struct_encoder_name": "gat",
+        "topology_encoder_name": "gat",
+        "attr_decoder_name": "gcn",
+        "struct_decoder_name": "gcn",
+        "node_encoder_num_layers": 1,
+        "edge_encoder_num_layers": 1,
+        "subgraph_encoder_num_layers": 1,
+        "attr_decoder_num_layers": 1,
+        "struct_decoder_num_layers": 1,
+        "sparse_attention_weight": 0,
+        "theta": 1.0,
+        "eta": 1.0
+      }
+    },
+    "reddit": {
+      "nodes": 10984,
+      "features": 64,
+      "graph_sha256": "9bdeff7750eb0464a4de7ae07fbd531a69732ce8f19b532cef08e96b80f8dc1e",
+      "params": {
+        "hid_dim": 32,
+        "alpha": 0.9,
+        "dropout": 0,
+        "lr": 0.001,
+        "epoch": 20,
+        "loss_name": "add_log_t_entropy",
+        "loss_weight": -1,
+        "T": 2,
+        "aggr": "add",
+        "attention": 2,
+        "use_encoder_num": 3,
+        "attr_encoder_name": "gcn",
+        "struct_encoder_name": "gcn",
+        "topology_encoder_name": "gcn",
+        "attr_decoder_name": "gcn",
+        "struct_decoder_name": "gcn",
+        "node_encoder_num_layers": 1,
+        "edge_encoder_num_layers": 1,
+        "subgraph_encoder_num_layers": 1,
+        "attr_decoder_num_layers": 1,
+        "struct_decoder_num_layers": 1,
+        "sparse_attention_weight": 0,
+        "theta": 1.0,
+        "eta": 1.0
+      }
+    }
+  }
+}

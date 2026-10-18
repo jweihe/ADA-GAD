@@ -1,0 +1,7 @@
+{
+  "status": "reference_calibration_not_final_task_protocol",
+  "datasets": ["weibo", "reddit"],
+  "methods": ["ada-gad"],
+  "seeds": [0, 1, 2],
+  "max_nodes": 12000
+}
