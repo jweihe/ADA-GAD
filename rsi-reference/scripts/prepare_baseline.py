@@ -1,8 +1,9 @@
-"""Trusted one-time preparation: train, export, reload, and freeze the reference.
+"""Independent training reproduction: train, export and check new model states.
 
 Run before research and outside Work/Judge. Source/data downloads happen here;
-normal Judge calls do not train. Only the label-free exported bundle is staged
-for Work; label-bearing raw and Judge data stay in this preparation directory.
+normal Judge calls do not train. This optional command does not replace the
+existing task baseline delivered by materialize_reference.py. Label-bearing raw
+and Judge data stay in this trusted reproduction directory.
 """
 import argparse
 import os
@@ -46,7 +47,7 @@ def main():
         "manifest_sha256": sha256(bundle / "candidate/manifest.json"),
         "inference_verification_sha256": sha256(destination / "reload-verification/verification.json"),
         "boundary": "Stage reference/candidate and reference/graphs only into Work; operator-data is preparation/Judge-only",
-        "baseline_contract": "Freeze the materialized artifact and measured baseline after this preparation; normal Solution copies it without training or scoring."})
+        "baseline_contract": "Independent reproduction only; use materialize_reference.py for the existing frozen task baseline. These newly trained weights never replace it."})
 
 
 if __name__ == "__main__":

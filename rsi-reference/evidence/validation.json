@@ -1,7 +1,7 @@
 {
-  "validated_at_utc": "2026-10-18T16:09:29.224874+00:00",
+  "validated_at_utc": "2026-10-19T02:47:46.342896+00:00",
   "contract_and_artifact_tests": {
-    "passed": 23,
+    "passed": 31,
     "python": "3.12.14",
     "platform": "macOS arm64"
   },
@@ -10,10 +10,15 @@
     "single_gpu": "A100 80GB",
     "metrics_recomputed": true
   },
-  "new_full_preparation_and_gpu_reload_parity": "pending",
   "harbor_validation": "pending",
   "strong_model_trajectory": "not_run",
   "record_scope": "Completed checks are distinct from the new pipeline execution requirements",
   "fixed_graph_reconstruction": "Both graphs recreated from public pinned archives; graph and label archive hashes match earlier Linux calibration",
-  "fixed_model_numeric_schema": "Two real-graph CPU model constructions and exact numeric state round trips passed with PyTorch 2.2.2"
+  "fixed_model_numeric_schema": "Two real-graph CPU model constructions and exact numeric state round trips passed with PyTorch 2.2.2",
+  "six_trained_state_export": "passed; exact array round trip and audited original checkpoint SHA256 for every graph/seed",
+  "six_trained_model_gpu_reload_parity": "passed; six fresh CUDA:0 processes with one visible A100 80GB, rtol=1e-5 atol=1e-6",
+  "existing_reference_delivery": "30,224,871-byte archive; reference.lock.json commits to archive and every member",
+  "combined_from_scratch_reproduction_driver": "not_run_as_one_complete_invocation; optional, not required for task baseline access",
+  "reloaded_reference_mean_roc_auc": 0.7483516115551683,
+  "offline_materialization": "passed; all 21 archive members match reference.lock.json"
 }

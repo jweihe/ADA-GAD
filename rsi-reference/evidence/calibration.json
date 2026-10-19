@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source_revision": "71a3aca936ccfe430e3809864f256d4bf80b22ee",
-  "scope": "Earlier contributor-run calibration; these checkpoints are not required artifacts of the public preparation contract",
+  "scope": "Original six-run calibration. These same final checkpoints are now publicly delivered as numeric states in release rsi-reference-v1; evaluation.json reports fresh fixed-model scoring.",
   "started_at_utc": "2026-10-18T03:53:17.095963+00:00",
   "wall_seconds": 5975.114810705185,
   "peak_cuda_allocated_bytes": 5493093376,

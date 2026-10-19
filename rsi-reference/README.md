@@ -1,115 +1,126 @@
-# Reproducible single-GPU ADA-GAD reference preparation
+# Frozen single-GPU ADA-GAD reference
 
-This directory delivers the source and executable preparation interface for the
-graph-denoising research task. The baseline is the released training procedure,
-materialized once during trusted task preparation. It does not require access to
-any checkpoint stored on the contributor's development machines.
+The task baseline is an existing, downloadable bundle of six trained ADA-GAD
+model states: Weibo and Reddit, each with training seeds 0, 1 and 2. Download it
+from [release rsi-reference-v1](https://github.com/jweihe/ADA-GAD/releases/tag/rsi-reference-v1).
+Task construction, Solution and Judge require no baseline training and no access
+to a contributor development machine.
 
-## Baseline production contract
+## Artifact identity and retrieval
 
-1. Verify the bundled source bytes against `sources.lock.json`. ADA-GAD is fixed
-   at `71a3aca936ccfe430e3809864f256d4bf80b22ee`; the modern PyGOD reference library
-   is fixed at `c84dccafa9bf587cd03cfd3e89b9be7a8f3337e8`.
-2. Fetch Weibo and Reddit from PyGOD data revision
-   `77976df4129f5f753907beea4945bd3e21d0251f`. Check archive length and Git blob
-   identity before unpickling the official data in trusted preparation.
-3. Train the released ADA-GAD configuration for seeds 0, 1 and 2 on each graph.
-   Each of the three encoders is pretrained for 20 epochs, followed by 20
-   detection epochs. Graph preprocessing, model dimensions and scoring are fixed.
-4. Export the six trusted training outputs to numeric NumPy archives. Check every
-   tensor against a fresh fixed model and require an exact numeric round trip.
-5. Reconstruct each model in a fresh scoring process. Compare all node scores
-   against that preparation run's stored reference scores using `rtol=1e-5,
-   atol=1e-6`. Abort on any failed run, invalid artifact or failed comparison.
-6. Freeze the resulting `reference/candidate/manifest.json`, model hashes,
-   `reference/hashes.json`, evaluation assets and measured reference score before
-   the research campaign. The manifest records the actual newly produced weights;
-   there is no dependency on an unspecified previously trained checkpoint bundle.
+- [Direct archive download](https://github.com/jweihe/ADA-GAD/releases/download/rsi-reference-v1/ada-gad-reference-v1.tar.gz):
+  30,224,871 bytes.
+- Archive SHA256: `8089dd870e105be8df288911321894c262d0d626b035db8aa8feaaee7ea7dd89`.
+- Candidate manifest SHA256: `9b32683cea19beaf6ade890f76b1c1b2345fac16376da037921d18df68fe51e2`.
+- `reference.lock.json` commits to the archive and every member's size and hash,
+  including all six weights, the inference specification and both graphs.
+- The export and inference code used for this artifact is available at
+  `e85c0e63d43252fb2764156e4f51b9b91a603b00` in this repository. Its unmodified
+  ADA-GAD model files are pinned to `71a3aca936ccfe430e3809864f256d4bf80b22ee`.
 
-The materialized baseline may vary slightly across eligible hardware or numeric
-libraries. The frozen artifact and its measured score are established by this
-preparation, not silently substituted for an earlier calibration. Within a task
-campaign, baseline/candidate graph versions, inference specification and scoring
-remain identical.
-
-## Commands
-
-Preparation requires Linux x86_64, Python 3.12, a CUDA-compatible driver, and one
-A100 80GB or equivalent eligible GPU. Place this checkout and the destination on
-persistent storage. CPU-only installation may run on a separate machine sharing
-that storage.
+Retrieve and verify the existing bundle using standard-library Python only:
 
 ```bash
 cd rsi-reference
-RSI_PYTHON_BIN=python3.12 bash scripts/setup_linux.sh
-envs/torch222/bin/python scripts/verify_sources.py
-envs/torch222/bin/python scripts/prepare_baseline.py \
-  --destination "$PWD/prepared/reference-v1" --gpu 0
+python3 scripts/materialize_reference.py --destination prepared/reference-v1
 ```
 
-The installer pins PyTorch 2.2.2, PyG 2.5.3 and the listed scientific libraries.
-`wheels.lock.json` gives the exact official Python 3.12/Linux CUDA 12.1 extension
-wheel URLs, lengths and SHA256 digests. Full resolved package versions are saved
-to `envs/torch222/requirements.resolved.txt` after installation.
+The command downloads the pinned asset, checks its length and SHA256, then
+verifies every extracted regular file. It rejects unexpected members, duplicate
+paths, links, traversal paths and hash mismatches. Use a fresh destination. For
+offline staging, pass `--archive /path/to/ada-gad-reference-v1.tar.gz` as well.
+This command performs no training or scoring.
 
-The preparation driver invokes the existing label-separated data preparation and
-sequential training suite, then the export and reload-parity tools. It uses only
-physical GPU 0, with exactly one CUDA device visible to each model process.
+## Frozen baseline contract
 
-## What to stage
+The selected reference is exactly the six numeric `.npz` states named by
+`candidate/manifest.json` in this asset. Preserve those states and the locked
+graph/model identities throughout the campaign. Independent retraining is useful
+for reproduction, but never replaces this selected baseline.
 
-The destination has these distinct roles:
+Normal Solution copies the verified `candidate/` directory to
+`WORKDIR/candidate`. Normal Judge reconstructs the fixed model using its own
+source, graphs and labels, accepts bounded numeric arrays, and recomputes node
+scores. Neither Solution nor Judge trains or regenerates a reference. Stored
+reference scores and claimed metric files are never scoring inputs.
 
-- `operator-data/raw` and `operator-data/judge`: trusted preparation/Judge only;
-  these contain labels and must never be copied into Work.
-- `training-runs`: trusted preparation records and checkpoints; not a scoring
-  input supplied by a candidate.
-- `reference/candidate`: six numeric weight archives and their manifest.
-- `reference/graphs`: fixed label-free feature/edge archives.
-- `reference/calibration.json`, `reference/inference-verification.json`,
-  `reference/hashes.json`, `reload-verification` and `preparation.json`: preparation
-  evidence and commitments.
+The archive contains:
 
-Normal Solution copies the prepared `reference/candidate` to
-`WORKDIR/candidate`, verifying the task-owned committed hashes. It performs no
-training or evaluation. Normal Judge reloads submitted arrays into its own fixed
-model and computes node scores; it performs no training and does not trust stored
-score vectors as rewards. `gad_rsi.inference` accepts no label path and never
-loads a pickle or candidate Python. Training-checkpoint loading occurs only in
-the explicitly operator-owned exporter.
+- `candidate/manifest.json` and six numeric states with individual hashes.
+- `graphs/{weibo,reddit}.npz`, containing exactly `x` and `edge_index`.
+- `reference-spec.json`, `LICENSE` and `hashes.json`.
+- `calibration.json`, `evaluation.json` and `inference-verification.json`.
+- `reference-scores/`: original label-free score vectors, solely for the supplied
+  reload-parity check. They are not needed in Work or normal Judge.
 
-Stage only the curated code and allowed reference files into the task image. Do
-not copy the entire upstream repository into Work: upstream example data and
-trusted preparation outputs can contain labels. Work and Judge run offline after
-asset staging, with evaluator code/labels protected in a fresh Judge. Actual
-container isolation still needs task-level validation.
+No labels, dataset pickles, Python checkpoint pickles or training-machine paths
+are included. Stage only curated source, `candidate/` and label-free graphs into
+Work. Do not copy the whole upstream checkout or trusted preparation directories:
+the upstream repository's example data can contain labels. Judge-only labels,
+protected tests and scoring code must remain outside Work. Work/Judge run offline
+after staging; container isolation still needs task-level validation.
 
-## Calibration and validation status
+## Measured validation
 
-`evidence/calibration.json` publishes sanitized receipts from six earlier A100
-runs of this training recipe: Weibo AUROC mean 0.927853 and Reddit mean 0.568851,
-with six-run mean 0.748352. Reference production took 5,975.11 seconds; maximum
-training CUDA allocation was 5,493,093,376 bytes. These measurements provide
-calibration context. Those private checkpoints are not required inputs to the
-public preparation command and are not presented as downloadable assets here.
+The released per-dataset recipe trained each of three encoders for 20 epochs,
+followed by 20 detection epochs. All six training runs used only one A100 80GB.
+They took 5,975.11 seconds total with maximum training CUDA allocation
+5,493,093,376 bytes. Original checkpoint and graph identities were audited before
+export. Every exported tensor round trip is exact.
 
-The earlier source/data/score/checkpoint receipts were checked and metrics
-recomputed. The existing contract and numeric-archive tests pass (23 checks). Both graphs
-have also been reconstructed from their pinned public downloads with identical
-prepared graph/label hashes. Fixed-model construction and exact numeric state
-round trips passed on both real graphs using CPU PyTorch 2.2.2; this is not a
-trained-model scoring-parity result.
-`evidence/validation.json` distinguishes completed checks from pending execution:
-the newly combined preparation/export/reload path has not yet passed a full GPU
-run, and no complete Harbor validation or strong-model research trajectory is
-claimed. Task preparation must complete those checks and freeze its actual
-baseline before research begins. Full Work + Judge + mandatory-overhead timing
-remains to be measured; the 99.59-minute training figure is not a full loop time.
+On October 19, 2026, each numeric state was reloaded into a fresh fixed-model
+process on GPU 0, with exactly one CUDA device visible. All six all-node score
+comparisons passed `rtol=1e-5, atol=1e-6`. GPU reductions are not bitwise stable;
+the frozen reference's freshly recomputed mean AUROC was
+**0.7483516115551683**, versus **0.7483520309762254** in the original training
+receipt. Both round to 0.748352. The original and reloaded measurements remain
+separate records; no label-based checkpoint or score-sign selection was used.
+
+Freshly reloaded Weibo AUROC was 0.9278529771 (population seed standard deviation
+0.0034165931); Reddit AUROC was 0.5688502461 (0.0000750768). See
+`evidence/evaluation.json` for all six AUROC/AP results. The serial parity driver
+took 30.58 seconds end to end; its model-scoring sections totaled 13.46 seconds.
+Peak inference CUDA allocation was 3,883,723,776 bytes; measured maximum child
+RSS was 2,327,712 KiB. This is an export/reload verification measurement, not a
+complete isolated Judge or adaptive research cycle.
+
+The contract/archive/materialization tests pass (31 checks), pinned public data reconstructs the
+same graphs, and fixed-model construction passes on both graphs. Full clean-image
+Harbor validation, phase resource caps, matched-control costs and a strong-model
+research trajectory remain pending. No completed strong-model failure is claimed.
+
+## Environment and independent training reproduction
+
+The calibrated environment is Linux x86_64, Python 3.12.3, PyTorch 2.2.2+cu121,
+PyG 2.5.3 and NumPy 1.26.4. Install on persistent storage with one eligible GPU:
+
+```bash
+RSI_PYTHON_BIN=python3.12 bash scripts/setup_linux.sh
+envs/torch222/bin/python scripts/verify_sources.py
+```
+
+`wheels.lock.json` pins official Python 3.12/Linux CUDA 12.1 extension wheel
+URLs, lengths and SHA256 digests. Other scientific-library versions are pinned
+by the installer, with the full resolved environment recorded after installation.
+
+For optional independent training reproduction, run:
+
+```bash
+envs/torch222/bin/python scripts/prepare_baseline.py --destination "$PWD/prepared/independent-reproduction-v1" --gpu 0
+```
+
+This separate command downloads trusted public raw data, trains six new models,
+exports them and checks their reload parity. Its `operator-data/raw` and
+`operator-data/judge` contain labels and must never enter Work. The combined
+from-scratch driver has not yet been run as one complete invocation. The released
+artifact instead comes from the already completed and audited six-run calibration,
+followed by the now completed export/reload validation. Newly reproduced weights
+do not change the task baseline.
 
 ## Source and license
 
-The integration follows the repository's Apache-2.0 license. Bundled ADA-GAD and
-PyGOD source files are unmodified, identified individually in `sources.lock.json`,
-and retain their upstream license files under `sources/`. The modern PyGOD code
-is BSD-2-Clause. The self-contained source subset contains no dataset pickles or
-pretrained model checkpoints.
+The integration and released model states follow Apache-2.0. Bundled ADA-GAD and
+PyGOD source files are unmodified and identified in `sources.lock.json`, with
+their upstream licenses retained under `sources/`. Modern PyGOD is BSD-2-Clause.
+The curated source directory contains no dataset pickles or model checkpoints;
+trained numeric weights are delivered through the separately locked release asset.

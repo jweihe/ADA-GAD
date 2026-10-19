@@ -1,0 +1,103 @@
+{
+  "status": "passed",
+  "scope": "Trusted operator scoring of freshly reloaded frozen reference; not a clean-image Judge test",
+  "trials": [
+    {
+      "dataset": "weibo",
+      "seed": 0,
+      "metrics": {
+        "roc_auc": 0.9287573235254777,
+        "average_precision": 0.3129650577648817,
+        "nodes": 8405,
+        "anomalies": 347
+      },
+      "scores_sha256": "f28526ec2668d86095e2e5cb38334ba6849d837b91aa0251e5bb59406b17a453",
+      "labels_sha256": "39e6298acb57904db8d55d083b26a81d0b389baeca9b459eedd7eac1fef24c8e"
+    },
+    {
+      "dataset": "weibo",
+      "seed": 1,
+      "metrics": {
+        "roc_auc": 0.9315113124372794,
+        "average_precision": 0.3196658153156114,
+        "nodes": 8405,
+        "anomalies": 347
+      },
+      "scores_sha256": "b8f794a6bc610cfb725b76631736c6c79d83d3f3ede57b2e9fe5f5bae84c5d33",
+      "labels_sha256": "39e6298acb57904db8d55d083b26a81d0b389baeca9b459eedd7eac1fef24c8e"
+    },
+    {
+      "dataset": "weibo",
+      "seed": 2,
+      "metrics": {
+        "roc_auc": 0.9232902952155947,
+        "average_precision": 0.2979318440754742,
+        "nodes": 8405,
+        "anomalies": 347
+      },
+      "scores_sha256": "50bfa9cd99f4854f90efef39f6fb733dd9f1a94fb391f8efe45f4820993d2522",
+      "labels_sha256": "39e6298acb57904db8d55d083b26a81d0b389baeca9b459eedd7eac1fef24c8e"
+    },
+    {
+      "dataset": "reddit",
+      "seed": 0,
+      "metrics": {
+        "roc_auc": 0.5687905474464952,
+        "average_precision": 0.04096094955831257,
+        "nodes": 10984,
+        "anomalies": 366
+      },
+      "scores_sha256": "375b9ee2142ddad9b55f65c51d45977471437d117385c526ec715de80ad0a166",
+      "labels_sha256": "f0a825a53c91a780acbbb19d08e066919784fb0df8e5f2b72b94847094b7b86f"
+    },
+    {
+      "dataset": "reddit",
+      "seed": 1,
+      "metrics": {
+        "roc_auc": 0.5689561338772082,
+        "average_precision": 0.04094214926738759,
+        "nodes": 10984,
+        "anomalies": 366
+      },
+      "scores_sha256": "bfe63483d975e750281d33e5f080fb6d1667251e30d4cc6854f669a688e724cb",
+      "labels_sha256": "f0a825a53c91a780acbbb19d08e066919784fb0df8e5f2b72b94847094b7b86f"
+    },
+    {
+      "dataset": "reddit",
+      "seed": 2,
+      "metrics": {
+        "roc_auc": 0.5688040568289543,
+        "average_precision": 0.04088743789335596,
+        "nodes": 10984,
+        "anomalies": 366
+      },
+      "scores_sha256": "7813dc7158d60ce6a6f0acadc6687304a7052428ae9d8665826ba6e75a591692",
+      "labels_sha256": "f0a825a53c91a780acbbb19d08e066919784fb0df8e5f2b72b94847094b7b86f"
+    }
+  ],
+  "six_trial_mean_roc_auc": 0.7483516115551683,
+  "aggregates": {
+    "weibo": {
+      "roc_auc": {
+        "mean": 0.9278529770594507,
+        "std_ddof0": 0.003416593131348904
+      },
+      "average_precision": {
+        "mean": 0.3101875723853224,
+        "std_ddof0": 0.009087617775193782
+      }
+    },
+    "reddit": {
+      "roc_auc": {
+        "mean": 0.5688502460508859,
+        "std_ddof0": 7.507684807830067e-05
+      },
+      "average_precision": {
+        "mean": 0.04093017890635204,
+        "std_ddof0": 3.118181498528134e-05
+      }
+    }
+  },
+  "metric_computation_seconds": 0.05803349521011114,
+  "labels_included": false
+}

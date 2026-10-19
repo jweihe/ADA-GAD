@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "started_at_utc": "2026-10-19T02:41:42.731945+00:00",
+  "cuda_visible_devices": "0",
+  "returncode": 0,
+  "wall_seconds": 30.584705245681107,
+  "peak_child_rss_kib": 2327712,
+  "user_cpu_seconds": 22.04745,
+  "system_cpu_seconds": 13.349517
+}

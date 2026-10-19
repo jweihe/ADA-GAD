@@ -1,0 +1,116 @@
+{
+  "status": "passed",
+  "device": "cuda:0",
+  "trials": [
+    {
+      "dataset": "weibo",
+      "seed": 0,
+      "allclose_rtol_1e5_atol_1e6": true,
+      "bitwise_equal": false,
+      "max_absolute_difference": 0.0625,
+      "inference": {
+        "dataset": "weibo",
+        "nodes": 8405,
+        "device": "cuda:0",
+        "graph_sha256": "f1998525253f95b53a35e294a8dad0a88c186d9a237dfe9b657eeef7755cffc3",
+        "weights_sha256": "119740f5310c7a87b95fa5f622a71d27f97431e643ca10ad7b7cc6ec27d16e01",
+        "inference_spec_sha256": "a124275306e6b9888bd4ef16e914146dfb097460f166f62b3830ac0e2b9334e8",
+        "scores_sha256": "f28526ec2668d86095e2e5cb38334ba6849d837b91aa0251e5bb59406b17a453",
+        "runtime_seconds": 3.8818884398788214,
+        "peak_cuda_allocated_bytes": 2313105920
+      }
+    },
+    {
+      "dataset": "weibo",
+      "seed": 1,
+      "allclose_rtol_1e5_atol_1e6": true,
+      "bitwise_equal": false,
+      "max_absolute_difference": 0.0625,
+      "inference": {
+        "dataset": "weibo",
+        "nodes": 8405,
+        "device": "cuda:0",
+        "graph_sha256": "f1998525253f95b53a35e294a8dad0a88c186d9a237dfe9b657eeef7755cffc3",
+        "weights_sha256": "63816173b79d056a0be49df3b5875f19012d57a4d29bb4d49943d2e7d41a4345",
+        "inference_spec_sha256": "a124275306e6b9888bd4ef16e914146dfb097460f166f62b3830ac0e2b9334e8",
+        "scores_sha256": "b8f794a6bc610cfb725b76631736c6c79d83d3f3ede57b2e9fe5f5bae84c5d33",
+        "runtime_seconds": 2.0328440302982926,
+        "peak_cuda_allocated_bytes": 2313105920
+      }
+    },
+    {
+      "dataset": "weibo",
+      "seed": 2,
+      "allclose_rtol_1e5_atol_1e6": true,
+      "bitwise_equal": false,
+      "max_absolute_difference": 0.03125,
+      "inference": {
+        "dataset": "weibo",
+        "nodes": 8405,
+        "device": "cuda:0",
+        "graph_sha256": "f1998525253f95b53a35e294a8dad0a88c186d9a237dfe9b657eeef7755cffc3",
+        "weights_sha256": "fd87d2d9d5040cab0c2da3650e224bdcd4aa866b6a4cd9311a7731c0055cbfb4",
+        "inference_spec_sha256": "a124275306e6b9888bd4ef16e914146dfb097460f166f62b3830ac0e2b9334e8",
+        "scores_sha256": "50bfa9cd99f4854f90efef39f6fb733dd9f1a94fb391f8efe45f4820993d2522",
+        "runtime_seconds": 1.979231959208846,
+        "peak_cuda_allocated_bytes": 2313105920
+      }
+    },
+    {
+      "dataset": "reddit",
+      "seed": 0,
+      "allclose_rtol_1e5_atol_1e6": true,
+      "bitwise_equal": false,
+      "max_absolute_difference": 3.814697265625e-06,
+      "inference": {
+        "dataset": "reddit",
+        "nodes": 10984,
+        "device": "cuda:0",
+        "graph_sha256": "9bdeff7750eb0464a4de7ae07fbd531a69732ce8f19b532cef08e96b80f8dc1e",
+        "weights_sha256": "d11b5b17ceb46576ac232688f2cae24d5f5e459329e4f53572ebed5f48e06b48",
+        "inference_spec_sha256": "a124275306e6b9888bd4ef16e914146dfb097460f166f62b3830ac0e2b9334e8",
+        "scores_sha256": "375b9ee2142ddad9b55f65c51d45977471437d117385c526ec715de80ad0a166",
+        "runtime_seconds": 1.9184910226613283,
+        "peak_cuda_allocated_bytes": 3883723776
+      }
+    },
+    {
+      "dataset": "reddit",
+      "seed": 1,
+      "allclose_rtol_1e5_atol_1e6": true,
+      "bitwise_equal": false,
+      "max_absolute_difference": 4.291534423828125e-06,
+      "inference": {
+        "dataset": "reddit",
+        "nodes": 10984,
+        "device": "cuda:0",
+        "graph_sha256": "9bdeff7750eb0464a4de7ae07fbd531a69732ce8f19b532cef08e96b80f8dc1e",
+        "weights_sha256": "694027ef5ab66065e2deabe4fdd5f6ac51c6f2f4283be1a0d6e752acc07c47eb",
+        "inference_spec_sha256": "a124275306e6b9888bd4ef16e914146dfb097460f166f62b3830ac0e2b9334e8",
+        "scores_sha256": "bfe63483d975e750281d33e5f080fb6d1667251e30d4cc6854f669a688e724cb",
+        "runtime_seconds": 1.82350395899266,
+        "peak_cuda_allocated_bytes": 3883723776
+      }
+    },
+    {
+      "dataset": "reddit",
+      "seed": 2,
+      "allclose_rtol_1e5_atol_1e6": true,
+      "bitwise_equal": false,
+      "max_absolute_difference": 3.814697265625e-06,
+      "inference": {
+        "dataset": "reddit",
+        "nodes": 10984,
+        "device": "cuda:0",
+        "graph_sha256": "9bdeff7750eb0464a4de7ae07fbd531a69732ce8f19b532cef08e96b80f8dc1e",
+        "weights_sha256": "da891c0b2d3d5f96cf299e1a06b9b6facbdc7ef11f9f6b6fbe4ba98411f17360",
+        "inference_spec_sha256": "a124275306e6b9888bd4ef16e914146dfb097460f166f62b3830ac0e2b9334e8",
+        "scores_sha256": "7813dc7158d60ce6a6f0acadc6687304a7052428ae9d8665826ba6e75a591692",
+        "runtime_seconds": 1.8282346818596125,
+        "peak_cuda_allocated_bytes": 3883723776
+      }
+    }
+  ],
+  "total_inference_seconds": 13.464194092899561,
+  "scope": "Numeric export and fresh-process fixed-model inference parity; not Harbor isolation validation"
+}
